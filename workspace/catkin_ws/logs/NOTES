@@ -1,0 +1,93 @@
+Errors:
+
+-- Could not load controller 'PositionJointInterface_trajectory_controller' because controller type 'position_controllers/JointTrajectoryController' does not exist.
+
+-- Action client not connected: PositionJointInterface_trajectory_controller/follow_joint_trajectory
+
+-- Unable to identify any set of controllers that can actuate the specified joints: [ iiwa_joint_1 iiwa_joint_2 iiwa_joint_3 iiwa_joint_4 iiwa_joint_5 iiwa_joint_6 iiwa_joint_7 ]
+
+Readup:
+
+http://wiki.ros.org/joint_trajectory_controller
+
+
+For solving the unable to load joint_position_controller.. issue
+
+Ref:
+https://github.com/qboticslabs/mastering_ros/issues/10
+
+I did:
+sudo apt-get install ros-kinetic-joint-state-controller
+
+Result: Not much help, but a new message now:
+Unable to identify any set of controllers that can actuate the specified joints: [ iiwa_joint_1 iiwa_joint_2 iiwa_joint_3 iiwa_joint_4 iiwa_joint_5 iiwa_joint_6 iiwa_joint_7 ]
+
+---
+
+Read: https://answers.ros.org/question/254084/gazebo-could-not-load-controller-jointtrajectorycontroller-does-not-exist-mastering-ros-chapter-10/
+
+
+Action: sudo apt-get install ros*controller*   (takes about 900MB as I install every ROS controller!)
+
+Result: Solved ! 
+
+New problem:
+
+-- Controller is taking too long to execute trajectory (the expected upper bound for the trajectory execution was 2.338601 seconds). Stopping trajectory.
+
+I can see the robot now trying to reach to pick the object the 'right way' ... just pauses and freezes and hovers over the object.
+
+--- The MoveItErrorCode execute(const Plan& plan, bool wait) in run_lin_trajectory function (move_iface.cpp) is failing.
+A sample code of this function is at: http://docs.ros.org/jade/api/moveit_ros_planning_interface/html/move__group_8cpp_source.html#l00791
+
+---
+
+Reading Notes for above problem:
+--------------------------------
+
+http://docs.ros.org/kinetic/api/moveit_tutorials/html/index.html
+
+https://github.com/ros-planning/moveit_tutorials/blob/kinetic-devel/doc/move_group_interface/src/move_group_interface_tutorial.cpp
+https://github.com/ros-planning/moveit_tutorials
+
+The part from the following (from last link above) gets a little more into the meat, but not much.
+But, this is a good start, and leads into/from the book studying portion:
+
+"Building more complex applications with MoveIt! often requires developers to dig into MoveIt!’s C++ API. As an added plus, using the C++ API directly skips many of the ROS Service/Action layers resulting in significantly faster performance.
+
+Robot Model and Robot State
+Planning Scene
+Planning Scene ROS API
+Motion Planning API    (--> what is of concern)
+Motion Planning Pipeline
+Visualizing Collisions
+Time Parameterization
+Planning with Approximated Constraint Manifolds
+Pick and Place Tutorial"
+
+----
+
+Of my current interest:
+
+http://docs.ros.org/kinetic/api/moveit_tutorials/html/doc/motion_planning_api/motion_planning_api_tutorial.html
+
+- "In MoveIt!, the motion planners are loaded using a plugin infrastructure. This allows MoveIt! to load motion planners at runtime. In this example, we will run through the C++ code required to do this.  ... etc.
+
+https://github.com/ros-planning/moveit_tutorials/tree/kinetic-devel/doc/motion_planning_api
+
+(follow this main file: https://github.com/ros-planning/moveit_tutorials/blob/kinetic-devel/doc/motion_planning_api/src/motion_planning_api_tutorial.cpp)
+
+Understand this thoroughly, and compare with what's happening / what's missing from the kuka challenge project, to understand why planning execution fails.
+---
+
+
+
+
+
+
+
+
+
+
+
+

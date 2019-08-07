@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>KUKA Udacity Robot Learning Lab at KIT</title>
+
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+  </head>
+
+  <body>
+
+    <div class="vcenter">
+      <div class="container" id="page-wrapper">
+        <h1>KUKA Udacity Robot Learning Lab at KIT</h1>
+
+        <div id="submission-messages"></div>
+        <div id="job-id-div"></div>
+        <div id="status-messages"></div>
+
+        <div id="logs-view" class="collapse text-center">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#log-modal">
+            View Log
+          </button>
+          <p>or</p>
+          <button id="clear-button" type="button" class="btn btn-lg btn-primary">
+            Submit a new job
+          </button>
+        </div>
+
+        <form id="submit-form" class="collapse show" action="./api/jobs" method="post">
+          <fieldset>
+            <input type="hidden" name="op" value="submit_git">
+            <input id="username" type="hidden" name="username" value="intersect_user_1">
+            <input id="password" type="hidden" name="secret" value="SET_YOUR_SECRET_HERE">
+            <input type="hidden" name="project" value="">
+            <input type="hidden" name="git_tag" value="">
+            <div id="project-list">
+              <div id="project-intro">Please choose a project:</div>
+              <div id="project-inputs">
+                <label class="project-label">
+                  Tower of Hanoi<span id="tower-source">(<a href="https://gitlab.ipr.kit.edu/rll/tower_of_hanoi/blob/master/scripts/tower_hanoi.py" target="_blank">source code</a>)</span>
+                  <input id="hanoi_input" type="radio" name="git_url" value="https://gitlab.ipr.kit.edu/rll/tower_of_hanoi.git">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="project-label">
+                  Greetings<span id="greetings-source">(<a  href="https://gitlab.ipr.kit.edu/rll/greetings/blob/master/scripts/greetings.py" target="_blank">source code</a>)</span>
+                  <input id="greetings_input" type="radio" name="git_url" value="https://gitlab.ipr.kit.edu/rll/greetings.git">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="project-label">
+                  Your project:
+                  <input id="repo-url" type="text" name="git_url" placeholder="Git repo URL" disabled>
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+            <input type="submit" value="Submit" />
+          </fieldset>
+        </form>
+
+        <div id="separator"></div>
+        <div class="row" id="partners">
+          <div class="col-4">
+            <div id="logo-kuka" class="thumbnail"><img class="img-responsive" alt="" src="./static/img/logo-KUKA.png" style="width:100%"/></div>
+          </div>
+          <div class="col-4">
+            <div id="logo-udacity" class="thumbnail"><img class="img-responsive" alt="" src="./static/img/logo-Udacity.png" style="width:100%"/></div>
+          </div>
+          <div class="col-4">
+            <div id="logo-kit" class="thumbnail"><img class="img-responsive" alt="" src="./static/img/logo-KIT.png" style="width:90%"/></div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="modal-wrapper">
+
+        <div class="modal fade" id="log-modal" tabindex="-1" role="dialog" aria-labelledby="log-modal" aria-hidden="true">
+          <div class="modal-dialog" id="log-modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Job Log</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div id="log-modal-body" class="modal-body"></div>
+              <div class="modal-footer">
+                <button id="log-close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a id="log-download-btn" href="#" class="btn btn-primary" role="button">Download Log</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="stream-modal" tabindex="-1" role="dialog" aria-labelledby="stream-modal" aria-hidden="true">
+          <div class="modal-dialog" id="stream-modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Robot Cam</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div id="stream-modal-body" class="modal-body"></div>
+              <div class="modal-footer">
+                <button id="stream-close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="./static/js/jquery-3.3.1.min.js"></script>
+    <script src="./static/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/js/hls.min.js"></script>
+    <script src="./static/js/demo-intersect.js"></script>
+
+  </body>
+</html>

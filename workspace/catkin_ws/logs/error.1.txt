@@ -1,0 +1,332 @@
+roslaunch rll_planning_project moveit_planning_execution.launch
+... logging to /home/anupam/.ros/log/02f7162c-946c-11e9-980e-78acc03d67ea/roslaunch-anupam-HP-Z800-Workstation-2300.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://anupam-HP-Z800-Workstation:41282/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /iiwa/PosVelJointInterface_trajectory_controller/action_monitor_rate: 30
+ * /iiwa/PosVelJointInterface_trajectory_controller/constraints/goal_time: 2.0
+ * /iiwa/PosVelJointInterface_trajectory_controller/joints: ['iiwa_joint_1', ...
+ * /iiwa/PosVelJointInterface_trajectory_controller/state_publish_rate: 1000
+ * /iiwa/PosVelJointInterface_trajectory_controller/stop_trajectory_duration: 0.5
+ * /iiwa/PosVelJointInterface_trajectory_controller/type: pos_vel_controlle...
+ * /iiwa/PositionJointInterface_gripper_controller/constraints/goal_time: 0.5
+ * /iiwa/PositionJointInterface_gripper_controller/constraints/iiwa_egl_position_left/goal: 0.04
+ * /iiwa/PositionJointInterface_gripper_controller/constraints/iiwa_egl_position_right/goal: 0.04
+ * /iiwa/PositionJointInterface_gripper_controller/constraints/stopped_velocity_tolerance: 0.03
+ * /iiwa/PositionJointInterface_gripper_controller/gains/iiwa_egl_position_left/d: 10
+ * /iiwa/PositionJointInterface_gripper_controller/gains/iiwa_egl_position_left/i: 2
+ * /iiwa/PositionJointInterface_gripper_controller/gains/iiwa_egl_position_left/i_clamp: 10
+ * /iiwa/PositionJointInterface_gripper_controller/gains/iiwa_egl_position_left/p: 500
+ * /iiwa/PositionJointInterface_gripper_controller/gains/iiwa_egl_position_right/d: 10
+ * /iiwa/PositionJointInterface_gripper_controller/gains/iiwa_egl_position_right/i: 2
+ * /iiwa/PositionJointInterface_gripper_controller/gains/iiwa_egl_position_right/i_clamp: 10
+ * /iiwa/PositionJointInterface_gripper_controller/gains/iiwa_egl_position_right/p: 500
+ * /iiwa/PositionJointInterface_gripper_controller/joints: ['iiwa_egl_positi...
+ * /iiwa/PositionJointInterface_gripper_controller/type: effort_controller...
+ * /iiwa/PositionJointInterface_trajectory_controller/action_monitor_rate: 30
+ * /iiwa/PositionJointInterface_trajectory_controller/constraints/goal_time: 2.0
+ * /iiwa/PositionJointInterface_trajectory_controller/constraints/stopped_velocity_tolerance: 0.03
+ * /iiwa/PositionJointInterface_trajectory_controller/joints: ['iiwa_joint_1', ...
+ * /iiwa/PositionJointInterface_trajectory_controller/state_publish_rate: 1000
+ * /iiwa/PositionJointInterface_trajectory_controller/stop_trajectory_duration: 0.5
+ * /iiwa/PositionJointInterface_trajectory_controller/type: position_controll...
+ * /iiwa/joint_state_controller/publish_rate: 1000
+ * /iiwa/joint_state_controller/type: joint_state_contr...
+ * /iiwa/move_group/allow_trajectory_execution: True
+ * /iiwa/move_group/capabilities: move_group/MoveGr...
+ * /iiwa/move_group/controller_list: [{'default': True...
+ * /iiwa/move_group/gripper/planner_configs: ['SBLkConfigDefau...
+ * /iiwa/move_group/jiggle_fraction: 0.05
+ * /iiwa/move_group/manipulator/planner_configs: ['SBLkConfigDefau...
+ * /iiwa/move_group/max_range: 5.0
+ * /iiwa/move_group/max_safe_path_cost: 1
+ * /iiwa/move_group/moveit_controller_manager: moveit_simple_con...
+ * /iiwa/move_group/moveit_manage_controllers: True
+ * /iiwa/move_group/octomap_resolution: 0.025
+ * /iiwa/move_group/planner_configs/BFMTkConfigDefault/balanced: 0
+ * /iiwa/move_group/planner_configs/BFMTkConfigDefault/cache_cc: 1
+ * /iiwa/move_group/planner_configs/BFMTkConfigDefault/extended_fmt: 1
+ * /iiwa/move_group/planner_configs/BFMTkConfigDefault/heuristics: 1
+ * /iiwa/move_group/planner_configs/BFMTkConfigDefault/nearest_k: 1
+ * /iiwa/move_group/planner_configs/BFMTkConfigDefault/num_samples: 1000
+ * /iiwa/move_group/planner_configs/BFMTkConfigDefault/optimality: 1
+ * /iiwa/move_group/planner_configs/BFMTkConfigDefault/radius_multiplier: 1.0
+ * /iiwa/move_group/planner_configs/BFMTkConfigDefault/type: geometric::BFMT
+ * /iiwa/move_group/planner_configs/BKPIECEkConfigDefault/border_fraction: 0.9
+ * /iiwa/move_group/planner_configs/BKPIECEkConfigDefault/failed_expansion_score_factor: 0.5
+ * /iiwa/move_group/planner_configs/BKPIECEkConfigDefault/min_valid_path_fraction: 0.5
+ * /iiwa/move_group/planner_configs/BKPIECEkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/BKPIECEkConfigDefault/type: geometric::BKPIECE
+ * /iiwa/move_group/planner_configs/BiESTkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/BiESTkConfigDefault/type: geometric::BiEST
+ * /iiwa/move_group/planner_configs/BiTRRTkConfigDefault/cost_threshold: 1e300
+ * /iiwa/move_group/planner_configs/BiTRRTkConfigDefault/frountier_node_ratio: 0.1
+ * /iiwa/move_group/planner_configs/BiTRRTkConfigDefault/frountier_threshold: 0.0
+ * /iiwa/move_group/planner_configs/BiTRRTkConfigDefault/init_temperature: 100
+ * /iiwa/move_group/planner_configs/BiTRRTkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/BiTRRTkConfigDefault/temp_change_factor: 0.1
+ * /iiwa/move_group/planner_configs/BiTRRTkConfigDefault/type: geometric::BiTRRT
+ * /iiwa/move_group/planner_configs/ESTkConfigDefault/goal_bias: 0.05
+ * /iiwa/move_group/planner_configs/ESTkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/ESTkConfigDefault/type: geometric::EST
+ * /iiwa/move_group/planner_configs/FMTkConfigDefault/cache_cc: 1
+ * /iiwa/move_group/planner_configs/FMTkConfigDefault/extended_fmt: 1
+ * /iiwa/move_group/planner_configs/FMTkConfigDefault/heuristics: 0
+ * /iiwa/move_group/planner_configs/FMTkConfigDefault/nearest_k: 1
+ * /iiwa/move_group/planner_configs/FMTkConfigDefault/num_samples: 1000
+ * /iiwa/move_group/planner_configs/FMTkConfigDefault/radius_multiplier: 1.1
+ * /iiwa/move_group/planner_configs/FMTkConfigDefault/type: geometric::FMT
+ * /iiwa/move_group/planner_configs/KPIECEkConfigDefault/border_fraction: 0.9
+ * /iiwa/move_group/planner_configs/KPIECEkConfigDefault/failed_expansion_score_factor: 0.5
+ * /iiwa/move_group/planner_configs/KPIECEkConfigDefault/goal_bias: 0.05
+ * /iiwa/move_group/planner_configs/KPIECEkConfigDefault/min_valid_path_fraction: 0.5
+ * /iiwa/move_group/planner_configs/KPIECEkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/KPIECEkConfigDefault/type: geometric::KPIECE
+ * /iiwa/move_group/planner_configs/LBKPIECEkConfigDefault/border_fraction: 0.9
+ * /iiwa/move_group/planner_configs/LBKPIECEkConfigDefault/min_valid_path_fraction: 0.5
+ * /iiwa/move_group/planner_configs/LBKPIECEkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/LBKPIECEkConfigDefault/type: geometric::LBKPIECE
+ * /iiwa/move_group/planner_configs/LBTRRTkConfigDefault/epsilon: 0.4
+ * /iiwa/move_group/planner_configs/LBTRRTkConfigDefault/goal_bias: 0.05
+ * /iiwa/move_group/planner_configs/LBTRRTkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/LBTRRTkConfigDefault/type: geometric::LBTRRT
+ * /iiwa/move_group/planner_configs/LazyPRMkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/LazyPRMkConfigDefault/type: geometric::LazyPRM
+ * /iiwa/move_group/planner_configs/LazyPRMstarkConfigDefault/type: geometric::LazyPR...
+ * /iiwa/move_group/planner_configs/PDSTkConfigDefault/type: geometric::PDST
+ * /iiwa/move_group/planner_configs/PRMkConfigDefault/max_nearest_neighbors: 10
+ * /iiwa/move_group/planner_configs/PRMkConfigDefault/type: geometric::PRM
+ * /iiwa/move_group/planner_configs/PRMstarkConfigDefault/type: geometric::PRMstar
+ * /iiwa/move_group/planner_configs/ProjESTkConfigDefault/goal_bias: 0.05
+ * /iiwa/move_group/planner_configs/ProjESTkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/ProjESTkConfigDefault/type: geometric::ProjEST
+ * /iiwa/move_group/planner_configs/RRTConnectkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/RRTConnectkConfigDefault/type: geometric::RRTCon...
+ * /iiwa/move_group/planner_configs/RRTkConfigDefault/goal_bias: 0.05
+ * /iiwa/move_group/planner_configs/RRTkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/RRTkConfigDefault/type: geometric::RRT
+ * /iiwa/move_group/planner_configs/RRTstarkConfigDefault/delay_collision_checking: 1
+ * /iiwa/move_group/planner_configs/RRTstarkConfigDefault/goal_bias: 0.05
+ * /iiwa/move_group/planner_configs/RRTstarkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/RRTstarkConfigDefault/type: geometric::RRTstar
+ * /iiwa/move_group/planner_configs/SBLkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/SBLkConfigDefault/type: geometric::SBL
+ * /iiwa/move_group/planner_configs/SPARSkConfigDefault/dense_delta_fraction: 0.001
+ * /iiwa/move_group/planner_configs/SPARSkConfigDefault/max_failures: 1000
+ * /iiwa/move_group/planner_configs/SPARSkConfigDefault/sparse_delta_fraction: 0.25
+ * /iiwa/move_group/planner_configs/SPARSkConfigDefault/stretch_factor: 3.0
+ * /iiwa/move_group/planner_configs/SPARSkConfigDefault/type: geometric::SPARS
+ * /iiwa/move_group/planner_configs/SPARStwokConfigDefault/dense_delta_fraction: 0.001
+ * /iiwa/move_group/planner_configs/SPARStwokConfigDefault/max_failures: 5000
+ * /iiwa/move_group/planner_configs/SPARStwokConfigDefault/sparse_delta_fraction: 0.25
+ * /iiwa/move_group/planner_configs/SPARStwokConfigDefault/stretch_factor: 3.0
+ * /iiwa/move_group/planner_configs/SPARStwokConfigDefault/type: geometric::SPARStwo
+ * /iiwa/move_group/planner_configs/STRIDEkConfigDefault/degree: 16
+ * /iiwa/move_group/planner_configs/STRIDEkConfigDefault/estimated_dimension: 0.0
+ * /iiwa/move_group/planner_configs/STRIDEkConfigDefault/goal_bias: 0.05
+ * /iiwa/move_group/planner_configs/STRIDEkConfigDefault/max_degree: 18
+ * /iiwa/move_group/planner_configs/STRIDEkConfigDefault/max_pts_per_leaf: 6
+ * /iiwa/move_group/planner_configs/STRIDEkConfigDefault/min_degree: 12
+ * /iiwa/move_group/planner_configs/STRIDEkConfigDefault/min_valid_path_fraction: 0.2
+ * /iiwa/move_group/planner_configs/STRIDEkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/STRIDEkConfigDefault/type: geometric::STRIDE
+ * /iiwa/move_group/planner_configs/STRIDEkConfigDefault/use_projected_distance: 0
+ * /iiwa/move_group/planner_configs/TRRTkConfigDefault/frountierNodeRatio: 0.1
+ * /iiwa/move_group/planner_configs/TRRTkConfigDefault/frountier_threshold: 0.0
+ * /iiwa/move_group/planner_configs/TRRTkConfigDefault/goal_bias: 0.05
+ * /iiwa/move_group/planner_configs/TRRTkConfigDefault/init_temperature: 10e-6
+ * /iiwa/move_group/planner_configs/TRRTkConfigDefault/k_constant: 0.0
+ * /iiwa/move_group/planner_configs/TRRTkConfigDefault/max_states_failed: 10
+ * /iiwa/move_group/planner_configs/TRRTkConfigDefault/min_temperature: 10e-10
+ * /iiwa/move_group/planner_configs/TRRTkConfigDefault/range: 0.0
+ * /iiwa/move_group/planner_configs/TRRTkConfigDefault/temp_change_factor: 2.0
+ * /iiwa/move_group/planner_configs/TRRTkConfigDefault/type: geometric::TRRT
+ * /iiwa/move_group/planning_plugin: ompl_interface/OM...
+ * /iiwa/move_group/planning_scene_monitor/publish_geometry_updates: True
+ * /iiwa/move_group/planning_scene_monitor/publish_planning_scene: True
+ * /iiwa/move_group/planning_scene_monitor/publish_state_updates: True
+ * /iiwa/move_group/planning_scene_monitor/publish_transforms_updates: True
+ * /iiwa/move_group/request_adapters: default_planner_r...
+ * /iiwa/move_group/start_state_max_bounds_error: 0.1
+ * /iiwa/move_group/trajectory_execution/allowed_execution_duration_scaling: 1.2
+ * /iiwa/move_group/trajectory_execution/allowed_goal_duration_margin: 0.5
+ * /iiwa/robot_description: <?xml version="1....
+ * /iiwa/robot_description_kinematics/manipulator/kinematics_solver: iiwa7_manipulator...
+ * /iiwa/robot_description_kinematics/manipulator/kinematics_solver_attempts: 3
+ * /iiwa/robot_description_kinematics/manipulator/kinematics_solver_search_resolution: 1000
+ * /iiwa/robot_description_kinematics/manipulator/kinematics_solver_timeout: 0.005
+ * /iiwa/robot_description_semantic: <?xml version="1....
+ * /iiwa/robot_state_publisher/ignore_timestamp: True
+ * /iiwa/rviz_anupam_HP_Z800_Workstation_2300_6481949936392172791/manipulator/kinematics_solver: iiwa7_manipulator...
+ * /iiwa/rviz_anupam_HP_Z800_Workstation_2300_6481949936392172791/manipulator/kinematics_solver_attempts: 3
+ * /iiwa/rviz_anupam_HP_Z800_Workstation_2300_6481949936392172791/manipulator/kinematics_solver_search_resolution: 1000
+ * /iiwa/rviz_anupam_HP_Z800_Workstation_2300_6481949936392172791/manipulator/kinematics_solver_timeout: 0.005
+ * /robot_description: <?xml version="1....
+ * /rosdistro: kinetic
+ * /rosversion: 1.12.14
+ * /use_sim_time: True
+
+NODES
+  /iiwa/
+    controller_spawner (controller_manager/spawner)
+    move_group (moveit_ros_move_group/move_group)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    rviz_anupam_HP_Z800_Workstation_2300_6481949936392172791 (rviz/rviz)
+  /
+    gazebo (gazebo_ros/gzserver)
+    gazebo_gui (gazebo_ros/gzclient)
+    urdf_spawner (gazebo_ros/spawn_model)
+
+auto-starting new master
+process[master]: started with pid [2317]
+ROS_MASTER_URI=http://localhost:11311
+
+setting /run_id to 02f7162c-946c-11e9-980e-78acc03d67ea
+process[rosout-1]: started with pid [2332]
+started core service [/rosout]
+process[gazebo-2]: started with pid [2375]
+process[gazebo_gui-3]: started with pid [2384]
+process[urdf_spawner-4]: started with pid [2391]
+process[iiwa/controller_spawner-5]: started with pid [2392]
+process[iiwa/robot_state_publisher-6]: started with pid [2393]
+process[iiwa/move_group-7]: started with pid [2394]
+process[iiwa/rviz_anupam_HP_Z800_Workstation_2300_6481949936392172791-8]: started with pid [2401]
+[ INFO] [1561152726.408998776]: Loading robot model 'rll_cell'...
+[ INFO] [1561152726.409126315]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[ INFO] [1561152726.583099343]: Publishing maintained planning scene on 'monitored_planning_scene'
+[ INFO] [1561152726.588561619]: MoveGroup debug mode is OFF
+Starting context monitors...
+[ INFO] [1561152726.588613513]: Starting scene monitor
+[ INFO] [1561152726.594240238]: Listening to '/iiwa/planning_scene'
+[ INFO] [1561152726.594280003]: Starting world geometry monitor
+[ INFO] [1561152726.599960200]: Listening to '/iiwa/collision_object' using message notifier with target frame '/world '
+[ INFO] [1561152726.604383410]: Listening to '/iiwa/planning_scene_world' for planning scene world geometry
+[ INFO] [1561152726.626104614]: Listening to '/iiwa/attached_collision_object' for attached collision objects
+Context monitors started.
+[INFO] [1561152726.665593, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[ INFO] [1561152726.759951179]: Initializing OMPL interface using ROS parameters
+[ INFO] [1561152726.821589317]: Using planning interface 'OMPL'
+[ INFO] [1561152726.823836719]: rviz version 1.12.16
+[ INFO] [1561152726.823893822]: compiled against Qt version 5.5.1
+[ INFO] [1561152726.823907840]: compiled against OGRE version 1.9.0 (Ghadamon)
+[ INFO] [1561152726.831224623]: Finished loading Gazebo ROS API Plugin.
+[ INFO] [1561152726.833609483]: Param 'default_workspace_bounds' was not set. Using default value: 10
+[ INFO] [1561152726.834890209]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...
+[ INFO] [1561152726.836312592]: Param 'start_state_max_bounds_error' was set to 0.1
+[ INFO] [1561152726.838265375]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1561152726.840048211]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1561152726.842002493]: Param 'jiggle_fraction' was set to 0.05
+[ INFO] [1561152726.844213773]: Param 'max_sampling_attempts' was not set. Using default value: 100
+[ INFO] [1561152726.844298534]: Using planning request adapter 'Add Time Parameterization'
+[ INFO] [1561152726.844334421]: Using planning request adapter 'Fix Workspace Bounds'
+[ INFO] [1561152726.844378759]: Using planning request adapter 'Fix Start State Bounds'
+[ INFO] [1561152726.844420850]: Using planning request adapter 'Fix Start State In Collision'
+[ INFO] [1561152726.844457776]: Using planning request adapter 'Fix Start State Path Constraints'
+[ INFO] [1561152726.850955453]: Finished loading Gazebo ROS API Plugin.
+[ INFO] [1561152726.852637040]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...
+SpawnModel script started
+[INFO] [1561152727.186405, 0.000000]: Loading model XML from ros parameter
+[INFO] [1561152727.193731, 0.000000]: Waiting for service /gazebo/spawn_urdf_model
+[ INFO] [1561152729.354155005]: Stereo is NOT SUPPORTED
+[ INFO] [1561152729.354360209]: OpenGl version: 3.3 (GLSL 3.3).
+[INFO] [1561152729.613905, 0.000000]: Calling service /gazebo/spawn_urdf_model
+[ INFO] [1561152729.684790374, 0.023000000]: waitForService: Service [/gazebo/set_physics_properties] is now available.
+[INFO] [1561152730.021883, 0.122000]: Spawn status: SpawnModel: Successfully spawned entity
+[ INFO] [1561152730.039276167, 0.122000000]: Physics dynamic reconfigure ready.
+[ INFO] [1561152730.108469283, 0.122000000]: Loading gazebo_ros_control plugin
+[ERROR] [1561152730.108579626, 0.122000000]: GazeboRosControlPlugin missing <legacyModeNS> while using DefaultRobotHWSim, defaults to true.
+This setting assumes you have an old package with an old implementation of DefaultRobotHWSim, where the robotNamespace is disregarded and absolute paths are used instead.
+If you do not want to fix this issue in an old package just set <legacyModeNS> to true.
+
+[ INFO] [1561152730.108670023, 0.122000000]: Starting gazebo_ros_control plugin in namespace: /iiwa
+[ INFO] [1561152730.109908279, 0.122000000]: gazebo_ros_control plugin is waiting for model URDF in parameter [/iiwa/robot_description] on the ROS param server.
+[ERROR] [1561152730.258457064, 0.122000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/iiwa_joint_1
+[ERROR] [1561152730.260153738, 0.122000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/iiwa_joint_2
+[ERROR] [1561152730.261497221, 0.122000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/iiwa_joint_3
+[ERROR] [1561152730.263028964, 0.122000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/iiwa_joint_4
+[ERROR] [1561152730.264809696, 0.122000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/iiwa_joint_5
+[ERROR] [1561152730.266556029, 0.122000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/iiwa_joint_6
+[ERROR] [1561152730.268137598, 0.122000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/iiwa_joint_7
+[urdf_spawner-4] process has finished cleanly
+log file: /home/anupam/.ros/log/02f7162c-946c-11e9-980e-78acc03d67ea/urdf_spawner-4*.log
+[ INFO] [1561152730.277557285, 0.122000000]: Loaded gazebo_ros_control.
+Loading grasp-fix plugin
+GazeboGraspFix: Using disable_collisions_on_attach 0
+GazeboGraspFix: Using update rate 100
+GazeboGraspFix: Using max_grip_count 8
+GazeboGraspFix: Using grip_count_threshold 4
+GazeboGraspFix: Using release_tolerance 0.0005
+GazeboGraspFix: Adding collision scoped name iiwa::iiwa_gripper_waggon_left::iiwa_gripper_waggon_left_collision
+GazeboGraspFix: Adding collision scoped name iiwa::iiwa_gripper_waggon_left::iiwa_gripper_waggon_left_fixed_joint_lump__iiwa_gripper_finger_left_collision_1
+GazeboGraspFix: Adding collision scoped name iiwa::iiwa_gripper_waggon_right::iiwa_gripper_waggon_right_collision
+GazeboGraspFix: Adding collision scoped name iiwa::iiwa_gripper_waggon_right::iiwa_gripper_waggon_right_fixed_joint_lump__iiwa_gripper_finger_right_collision_1
+Subscribing contact manager to topic ~/iiwa/contacts
+[ WARN] [1561152730.290364306, 0.123000000]: The default_robot_hw_sim plugin is using the Joint::SetPosition method without preserving the link velocity.
+[ WARN] [1561152730.290403059, 0.123000000]: As a result, gravity will not be simulated correctly for your model.
+[ WARN] [1561152730.290425933, 0.123000000]: Please set gazebo_pid parameters, switch to the VelocityJointInterface or EffortJointInterface, or upgrade to Gazebo 9.
+[ WARN] [1561152730.290449261, 0.123000000]: For details, see https://github.com/ros-simulation/gazebo_ros_pkgs/issues/612
+[INFO] [1561152730.294476, 0.126000]: Controller Spawner: Waiting for service controller_manager/switch_controller
+[INFO] [1561152730.298066, 0.130000]: Controller Spawner: Waiting for service controller_manager/unload_controller
+[INFO] [1561152730.301611, 0.133000]: Loading controller: joint_state_controller
+[ INFO] [1561152730.313713996, 0.146000000]: waitForService: Service [/gazebo/set_physics_properties] is now available.
+[INFO] [1561152730.316675, 0.148000]: Loading controller: PositionJointInterface_trajectory_controller
+[ERROR] [1561152730.323502522, 0.156000000]: Could not load controller 'PositionJointInterface_trajectory_controller' because controller type 'position_controllers/JointTrajectoryController' does not exist.
+[ERROR] [1561152730.323569119, 0.156000000]: Use 'rosservice call controller_manager/list_controller_types' to get the available types
+[ INFO] [1561152730.386757765, 0.220000000]: Physics dynamic reconfigure ready.
+[ERROR] [1561152731.325009, 1.145000]: Failed to load PositionJointInterface_trajectory_controller
+[INFO] [1561152731.325590, 1.146000]: Loading controller: PositionJointInterface_gripper_controller
+[ERROR] [1561152731.330023582, 1.151000000]: Could not load controller 'PositionJointInterface_gripper_controller' because controller type 'effort_controllers/JointTrajectoryController' does not exist.
+[ERROR] [1561152731.330088548, 1.151000000]: Use 'rosservice call controller_manager/list_controller_types' to get the available types
+[ERROR] [1561152732.331709, 2.125000]: Failed to load PositionJointInterface_gripper_controller
+[INFO] [1561152732.332417, 2.125000]: Controller Spawner: Loaded controllers: joint_state_controller
+[INFO] [1561152732.337578, 2.131000]: Started controllers: joint_state_controller
+[ INFO] [1561152733.853797679, 3.645000000]: Loading robot model 'rll_cell'...
+[ INFO] [1561152733.853908813, 3.645000000]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[ INFO] [1561152734.167394786, 3.953000000]: Starting scene monitor
+[ INFO] [1561152734.172364685, 3.958000000]: Listening to '/iiwa/move_group/monitored_planning_scene'
+[ INFO] [1561152734.173998015, 3.960000000]: waitForService: Service [/iiwa/get_planning_scene] has not been advertised, waiting...
+[ WARN] [1561152735.406009704, 5.175000000]: Waiting for PositionJointInterface_trajectory_controller/follow_joint_trajectory to come up
+[ INFO] [1561152739.211700546, 8.968000000]: Failed to call service get_planning_scene, have you launched move_group? at /tmp/binarydeb/ros-kinetic-moveit-ros-planning-0.9.15/planning_scene_monitor/src/planning_scene_monitor.cpp:498
+[ WARN] [1561152741.423386038, 11.176000000]: Waiting for PositionJointInterface_trajectory_controller/follow_joint_trajectory to come up
+[ INFO] [1561152744.301145362, 14.042000000]: Constructing new MoveGroup connection for group 'manipulator' in namespace ''
+[ERROR] [1561152747.464039067, 17.177000000]: Action client not connected: PositionJointInterface_trajectory_controller/follow_joint_trajectory
+[ WARN] [1561152752.537405753, 22.222000000]: Waiting for PositionJointInterface_gripper_controller/follow_joint_trajectory to come up
+^C[ WARN] [1561152758.562673720, 28.222000000]: Waiting for PositionJointInterface_gripper_controller/follow_joint_trajectory to come up
+[iiwa/rviz_anupam_HP_Z800_Workstation_2300_6481949936392172791-8] killing on exit
+[gazebo_gui-3] killing on exit
+[iiwa/move_group-7] killing on exit
+[iiwa/robot_state_publisher-6] killing on exit
+[gazebo-2] killing on exit
+[iiwa/controller_spawner-5] killing on exit
+[INFO] [1561152758.638351, 28.287000]: Shutting down spawner. Stopping and unloading controllers...
+[INFO] [1561152758.639208, 28.287000]: Stopping all controllers...
+Loading 'move_group/ApplyPlanningSceneService'...
+Loading 'move_group/ClearOctomapService'...
+Loading 'move_group/MoveGroupCartesianPathService'...
+Loading 'move_group/MoveGroupExecuteTrajectoryAction'...
+Loading 'move_group/MoveGroupGetPlanningSceneService'...
+Loading 'move_group/MoveGroupKinematicsService'...
+Loading 'move_group/MoveGroupMoveAction'...
+Loading 'move_group/MoveGroupPickPlaceAction'...
+Loading 'move_group/MoveGroupPlanService'...
+Loading 'move_group/MoveGroupQueryPlannersService'...
+Loading 'move_group/MoveGroupStateValidationService'...
+
+You can start planning now!
+
+^C[gazebo-2] escalating to SIGTERM
+[iiwa/controller_spawner-5] escalating to SIGTERM
+[WARN] [1561152773.667849, 28.288000]: Controller Spawner error while taking down controllers: transport error completing service call: receive_once[/iiwa/controller_manager/switch_controller]: unexpected error [Errno 4] Interrupted system call
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+done
+

@@ -1,0 +1,40 @@
+A bigger problem on my faster machine (7.28.2019)
+
+With iiwa, kuka etc, the controller manager itself is not seen (maybe it dies and doesnt respawn back)
+(rostopic list , rosservice list, rosnode list ... none of them show controller_manager)
+
+(this is after I installed all controllers (from error1.txt)
+
+https://answers.ros.org/question/214712/gazebo-controller-spawner-warning/
+
+---
+
+since rospack find controller_manager returns correctly, and rostopic list controller_manager does not, 
+it means that probably gazebo_ros_control is not getting loaded correctly (or something happens when it gets loaded)
+
+ <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+
+this is in:
+
+./src/rll_sdk/rll_description/urdf/iiwa7/iiwa.gazebo.xacro
+
+also looking at:
+./src/rll_sdk/rll_gazebo/launch/rll_gazebo.launch
+./src/rll_sdk/rll_control/config/rll_control.yaml
+
+Traced that gazebo urdf spawner ALWAYS crashes, no matter what project! 
+
+--> 
+
+IOError: [Errno 13] Permission denied: '/home/anupam/.ros/rosdep/sources.cache/index'
+[ INFO] [1564414040.331025822]: Finished loading Gazebo ROS API Plugin.
+[ INFO] [1564414040.332219619]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...
+[urdf_spawner-6] process has died [pid 13784, exit code 1, cmd /opt/ros/kinetic/lib/gazebo_ros/spawn_model -urdf -param robot_description -model my_robot -x 0.862925 -y -2.046535 -z 0.470000 -R 0.000002 -P -0.000004 -Y -0.816520 __name:=urdf_spawner __log:=/home/anupam/.ros/log/5a02a898-b215-11e9-818c-7c67a21201fb/urdf_spawner-6.log].
+log file: /home/anupam/.ros/log/5a02a898-b215-11e9-818c-7c67a21201fb/urdf_spawner-6*.log
+
+
+https://answers.ros.org/question/281477/ioerror-errno-13-permission-denied-rosrosdepsourcescacheindex/
+
+(sudo rosdep init; rosdep update) 
+
+

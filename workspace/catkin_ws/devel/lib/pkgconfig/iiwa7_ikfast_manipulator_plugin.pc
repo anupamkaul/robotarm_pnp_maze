@@ -1,0 +1,8 @@
+prefix=/home/anupam/robotarm_pnp_maze/workspace/catkin_ws/devel
+
+Name: iiwa7_ikfast_manipulator_plugin
+Description: Description of iiwa7_ikfast_manipulator_plugin
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/anupam/robotarm_pnp_maze/workspace/catkin_ws/devel/lib 
+Requires: moveit_core pluginlib roscpp tf_conversions

@@ -1,0 +1,8 @@
+prefix=/home/anupam/robotarm_pnp_maze/workspace/catkin_ws/install
+
+Name: rll_moveit_config
+Description: Description of rll_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/anupam/robotarm_pnp_maze/workspace/catkin_ws/install/lib 
+Requires: 

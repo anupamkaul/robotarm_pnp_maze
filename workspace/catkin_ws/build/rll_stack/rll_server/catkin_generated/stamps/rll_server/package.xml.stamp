@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>rll_server</name>
+  <version>0.0.0</version>
+  <description>The rll_server package</description>
+
+  <maintainer email="wolfgang.wiedmeyer@kit.edu">Wolfgang Wiedmeyer</maintainer>
+
+  <license>GPLv3+</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>python-tornado</depend>
+  <depend>python-git</depend>
+
+</package>

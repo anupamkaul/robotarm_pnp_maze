@@ -1,0 +1,8 @@
+prefix=/home/anupam/robotarm_pnp_maze/workspace/catkin_ws/devel
+
+Name: rll_server
+Description: Description of rll_server
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/anupam/robotarm_pnp_maze/workspace/catkin_ws/devel/lib 
+Requires: 

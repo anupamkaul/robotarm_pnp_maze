@@ -1,0 +1,67 @@
+to build moveit for ros-kinetic:
+
+https://moveit.ros.org/install/source/
+
+do upto:
+sudo apt-get install python-wstool python-catkin-tools clang-format-3.9
+
+install source and install ccache
+no need to do catkin build now ...
+
+now go to:
+http://docs.ros.org/kinetic/api/moveit_tutorials/html/doc/getting_started/getting_started.html
+
+upto:
+sudo apt install ros-kinetic-moveit
+
+if error on unable to fetch obj-recognition-msgs,
+
+do in order: (may be a dependency issue, or the servers were not working in the morning):
+1. sudo apt-get install ros-kinetic-object-recognition-core
+2. sudo apt-get install ros-kinetic-object-recognition-msgs
+
+if both install, then  sudo apt install ros-kinetic-moveit installs ! 
+
+---
+
+For my slower machine : 
+
+ROS update: Keys have changed recently (June 2019):
+
+http://answers.ros.org/question/325039/apt-update-fails-cannot-install-pkgs-key-not-working/
+
+Remove the old key
+
+    on Ubuntu 16.04 and newer (with ROS Kinetic, Melodic, etc):
+
+    sudo apt-key del 421C365BD9FF1F717815A3895523BAEEB01FA116
+
+    on Ubuntu 15.10 and older (ie: 14.04, from here):
+
+    sudo apt-key del B01FA116
+
+Import the new key
+
+This command should work on all versions of Ubuntu:
+
+# add the new key
+sudo -E apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+
+--> after this, sudo apt-get update worked (in general), and sudo apt-get install ros-kinetic-moveit worked! 
+
+---
+
+DEPENDENCIES for RLL_PLANNER:
+
+I pulled the following (cmake was complaining about rll_msgs):
+
+1. https://github.com/KITrobotics/rll_sdk.git  (this had rll_msgs)  
+2. https://github.com/KITrobotics/rll_stack.git 
+
+With this, I was able to build rll_planning_project.
+
+----
+
+
+
+
