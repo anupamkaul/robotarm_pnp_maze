@@ -3,7 +3,7 @@
   <arg name="robot" default="iiwa" />
   <arg name="headless" default="false"/>
   <!-- call the path planner three times and take the median as duration -->
-  <arg name="run_three_times" default="false"/>
+  <arg name="run_three_times" default="true"/>
   <arg name="grasp_object_dim_x" default="0.06" />
   <arg name="grasp_object_dim_y" default="0.07" />
   <arg name="grasp_object_dim_z" default="0.04" />
